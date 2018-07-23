@@ -136,7 +136,7 @@ export default class Header extends React.Component {
 				>
 					<div className="container">
 						<div className="columns is-gapless is-mobile header-container">
-							<div className="column is-4">
+							<div className="column is-4 has-text-left">
 								{!showBackButton && (
 									<BurgerButton
 										onClick={this.menuToggle}
@@ -144,10 +144,11 @@ export default class Header extends React.Component {
 									/>
 								)}
 								{showBackButton && <BackButton onClick={this.handleGoBack} />}
+								<Logo src={settings.logo} onClick={this.closeAll} alt="logo" />
 							</div>
 
 							<div className="column is-4 has-text-centered">
-								<Logo src={settings.logo} onClick={this.closeAll} alt="logo" />
+								{/* <Logo src={settings.logo} onClick={this.closeAll} alt="logo" /> */}
 							</div>
 							<div className="column is-4 has-text-right header-block-right">
 								<span
